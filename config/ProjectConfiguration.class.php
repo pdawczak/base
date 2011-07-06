@@ -11,5 +11,6 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfDoctrinePlugin');
 
     $this->setWebDir($this->getRootDir() . '/public_html');
+    $this->enablePlugins('sfDoctrineGuardPlugin');
   }
 }
