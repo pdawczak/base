@@ -7,7 +7,7 @@ all:
     param:
       dsn:      mysql:host=localhost;dbname=Base
       username: root
-      password: 
+      password: qwerty
       attributes:
         default_table_collate:  utf8_polish_ci
         default_table_charset:  utf8
