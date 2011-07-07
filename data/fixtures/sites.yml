@@ -1,0 +1,46 @@
+Site:
+
+  homepage:
+    route:            '@homepage'
+    order:            10000
+    keywords_tag:     Keywordsy
+    description_tag:  |
+      Text text text text text text text text text text text text text text text text
+       text text text text text text text text text text text text text text text text
+        text text text text text text text text text text text text text text text text text
+         text text text text text text text text text text text text text text text text
+    title_tag:        SiEmEs
+    title:            Strona główna
+    is_enabled:       true
+    text:             |
+      Strona główna, strona gówna, strona gówna, strona gówna, strona gówna, strona gówna
+      , strona gówna, strona gówna, strona gówna, strona gówna, strona gówna, strona gówna, strona gówna
+      , strona gówna, strona gówna, strona gówna, strona gówna, strona gówna, strona gówna
+      , strona gówna, strona gówna, strona gówna, strona gówna, strona gówna
+
+  news:
+    route:           '@news_index'
+    title:            Wiadomości
+    is_enabled:       true
+    order:            5000
+
+  kontakt:
+    title:            Kontakt
+    title_tag:        Kontakt
+    is_enabled:       true
+    text:             |
+      Kontakt, kontakt, kontakt, kontakt, kontakt, kontakt, kontakt, kontakt
+      , kontakt, kontakt, kontakt, kontakt, kontakt, kontakt, kontakt, kontakt
+      , kontakt, kontakt, kontakt, kontakt, kontakt, kontakt, kontakt, kontakt
+      , kontakt, kontakt, kontakt, kontakt, kontakt, kontakt, kontakt, kontakt
+    order:            500
+
+  nieaktywna:
+    title:            Strona nieaktywna
+    text:             Nieaktywna, nieaktywna
+
+  niewidoczna:
+    title:            Strona niewidoczna
+    show_in_menu:     false
+    is_enabled:       true
+    text:             Strona niewidoczna w menu
