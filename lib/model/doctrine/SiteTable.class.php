@@ -7,13 +7,34 @@
  */
 class SiteTable extends PageAbstractTable
 {
-    /**
-     * Returns an instance of this class.
-     *
-     * @return object SiteTable
-     */
-    public static function getInstance()
-    {
-        return Doctrine_Core::getTable('Site');
+  /**
+   * Returns an instance of this class.
+   *
+   * @return SiteTable
+   */
+  public static function getInstance()
+  {
+    return Doctrine_Core::getTable('Site');
+  }
+
+  /**
+   * @param Doctrine_Query $q
+   * @return Site
+   */
+  public function myGetEnabledSite(Doctrine_Query $q)
+  {
+    if (empty ($q)) {
+      $q = $this
+        ->createQuery('s')
+      ;
     }
+    
+    $alias = $q->getRootAlias();
+    
+    $q
+      ->addWhere($alias.'.is_enabled = ?', true)
+    ;
+
+    return $q->fetchOne();
+  }
 }
