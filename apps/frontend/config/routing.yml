@@ -5,7 +5,7 @@ site_show:
   url:        /:slug.html
   class:      sfDoctrineRoute
   param:      { module: site, action: show }
-  options:    { model: Site, type: object }
+  options:    { model: Site, type: object, method_for_query: myGetEnabledSite }
 
 # default rules
 homepage:
