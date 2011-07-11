@@ -9,6 +9,7 @@
     <?php include_javascripts() ?>
   </head>
   <body>
+    <?php include_component('site', 'mainMenu') ?>
     <?php echo $sf_content ?>
   </body>
 </html>
