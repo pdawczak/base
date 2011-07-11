@@ -1,0 +1,12 @@
+News:
+  
+<?php for ($i = 1; $i <= 11; $i++) :?>
+  news_<?php echo $i ?>:
+    title:          News nr. <?php echo $i."\n" ?>
+    text:           |
+      News, news, news, news, news, news, news, news, news, news, news, news, news
+      , news, news, news, news, news, news, news, news, news, news, news, news, news
+      , news, news, news, news, news, news, news, news, news, news, news, news, news
+      , news, news, news, news, news, news, news, news, news, news, news, news, news
+    created_at:     '<?php echo sprintf('2009-01-%s', $i + 10) ?>'
+<?php endfor ?>
