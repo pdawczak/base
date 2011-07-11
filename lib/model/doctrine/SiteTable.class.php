@@ -17,11 +17,7 @@ class SiteTable extends PageAbstractTable
     return Doctrine_Core::getTable('Site');
   }
 
-  /**
-   * @param Doctrine_Query $q
-   * @return Site
-   */
-  public function myGetEnabledSite(Doctrine_Query $q)
+  public function myGetEnabledSitesQuery(Doctrine_Query $q = null)
   {
     if (empty ($q)) {
       $q = $this
@@ -35,6 +31,27 @@ class SiteTable extends PageAbstractTable
       ->addWhere($alias.'.is_enabled = ?', true)
     ;
 
-    return $q->fetchOne();
+    return $q;
+  }
+
+  /**
+   * @param Doctrine_Query $q
+   * @return Site
+   */
+  public function myGetEnabledSite(Doctrine_Query $q = null)
+  {
+    return $this->myGetEnabledSitesQuery($q)->fetchOne();
+  }
+
+  public function myGetMainSites()
+  {
+    $q = $this->myGetEnabledSitesQuery();
+
+    $q
+      ->andWhere('show_in_menu = ?', true)
+      ->orderBy('order DESC')
+    ;
+
+    return $q->execute();
   }
 }
