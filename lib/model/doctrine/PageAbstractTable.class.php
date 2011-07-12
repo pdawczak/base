@@ -7,13 +7,13 @@
  */
 class PageAbstractTable extends Doctrine_Table
 {
-    /**
-     * Returns an instance of this class.
-     *
-     * @return object PageAbstractTable
-     */
-    public static function getInstance()
-    {
-        return Doctrine_Core::getTable('PageAbstract');
-    }
+  /**
+   * Returns an instance of this class.
+   *
+   * @return PageAbstractTable
+   */
+  public static function getInstance()
+  {
+    return Doctrine_Core::getTable('PageAbstract');
+  }
 }
