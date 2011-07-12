@@ -40,7 +40,7 @@ class Site extends BaseSite
 
   public function myGetSeoTitleTag()
   {
-    return $this->getTitleTag();
+    return $this->getTitleTag() ? $this->getTitleTag() : $this->getTitle();
   }
 
   public function myGetSeoKeywordsTag()
