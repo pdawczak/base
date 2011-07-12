@@ -16,5 +16,9 @@ class NewsForm extends BaseNewsForm
   public function configure()
   {
     parent::configure();
+
+    $this->useFields(array(
+      'title', 'title_tag', 'keywords_tag', 'description_tag', 'intro', 'text'
+    ));
   }
 }
