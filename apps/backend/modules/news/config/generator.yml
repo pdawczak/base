@@ -13,9 +13,15 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
-      form:    ~
+      fields:  
+        title:              { label: Tytuł }
+      list:    
+        display:            [=title]
+      filter:  
+        class:              false
+      form:    
+        display:
+          SEO:              [title_tag, keywords_tag, description_tag]
+          Treść:            [title, intro, text]
       edit:    ~
       new:     ~
