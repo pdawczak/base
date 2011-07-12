@@ -1,0 +1,30 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Site
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          site
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        is_enabled:         { label: Aktywna? }
+        show_in_menu:       { label: Widoczna w menu? }
+        title:              { label: Tytuł }
+      list:    
+        display:            [is_enabled, show_in_menu, =title]
+      filter:  
+        class:               false
+      form:    
+        display:
+          Zachowanie:       [is_enabled, show_in_menu, order]
+          SEO:              [title_tag, keywords_tag, description_tag]
+          Treść:            [title, text]
+      edit:    ~
+      new:     ~
