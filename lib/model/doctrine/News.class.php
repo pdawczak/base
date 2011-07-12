@@ -28,17 +28,17 @@ class News extends BaseNews
     return $this->getTitle();
   }
 
-  public function getSeoTitleTag()
+  public function myGetSeoTitleTag()
   {
-    return $this->getTitleTag();
+    return $this->getTitleTag() ? $this->getTitleTag() : $this->getTitle();
   }
 
-  public function getSeoKeywordsTag()
+  public function myGetSeoKeywordsTag()
   {
     return $this->getKeywordsTag();
   }
 
-  public function getSeoDescriptionTag()
+  public function myGetSeoDescriptionTag()
   {
     return $this->getDescriptionTag();
   }

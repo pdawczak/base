@@ -2,7 +2,7 @@
 
 interface mySeoContent extends myRouteObject
 {
-  public function getSeoTitleTag();
-  public function getSeoKeywordsTag();
-  public function getSeoDescriptionTag();
+  public function myGetSeoTitleTag();
+  public function myGetSeoKeywordsTag();
+  public function myGetSeoDescriptionTag();
 }

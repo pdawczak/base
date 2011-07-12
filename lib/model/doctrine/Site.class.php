@@ -38,17 +38,17 @@ class Site extends BaseSite
     return $this->getTitle();
   }
 
-  public function getSeoTitleTag()
+  public function myGetSeoTitleTag()
   {
     return $this->getTitleTag();
   }
 
-  public function getSeoKeywordsTag()
+  public function myGetSeoKeywordsTag()
   {
     return $this->getKeywordsTag();
   }
 
-  public function getSeoDescriptionTag()
+  public function myGetSeoDescriptionTag()
   {
     return $this->getDescriptionTag();
   }

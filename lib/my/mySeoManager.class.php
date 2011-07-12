@@ -32,7 +32,7 @@ class mySeoManager
     $title = '';
     foreach ($this->_contents as $content)
     {
-      $title = ('' == $title) ? $content->getSeoTitleTag() : $content->getSeoTitleTag().' | '.$title;
+      $title = ('' == $title) ? $content->myGetSeoTitleTag() : $content->myGetSeoTitleTag().' | '.$title;
     }
     return $title;
   }
@@ -47,7 +47,7 @@ class mySeoManager
     {
       foreach ($this->_contents as $content)
       {
-        if ('@homepage' == $content->getRoute())
+        if ('@homepage' == $content->myGetRoute())
         {
           continue;
         }
@@ -66,8 +66,8 @@ class mySeoManager
 
     if ($last = array_pop($this->_contents))
     {
-      $response->addMeta('description', $last->getSeoDescriptionTag());
-      $response->addMeta('keywords',    $last->getSeoKeywordsTag());
+      $response->addMeta('description', $last->myGetSeoDescriptionTag());
+      $response->addMeta('keywords',    $last->myGetSeoKeywordsTag());
     }
   }
 }
