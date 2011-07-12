@@ -16,5 +16,23 @@ class SiteForm extends BaseSiteForm
   public function configure()
   {
     parent::configure();
+
+    $this->useFields(array(
+      'title', 'title_tag', 'keywords_tag', 'description_tag', 'is_enabled', 'show_in_menu', 'order', 'text'
+    ));
+
+    $this->widgetSchema['keywords_tag']     = new sfWidgetFormTextarea();
+    $this->widgetSchema['description_tag']  = new sfWidgetFormTextarea();
+
+    $this->widgetSchema->setLabels(array(
+      'title'           => 'Tytuł',
+      'title_tag'       => 'Tag "Title"',
+      'keywords_tag'    => 'Tag "Keywords"',
+      'description_tag' => 'Tag "Description"',
+      'is_enabled'      => 'Aktywna?',
+      'show_in_menu'    => 'Widoczna w menu?',
+      'order'           => 'Sortowanie',
+      'text'            => 'Treść'
+    ));
   }
 }
