@@ -12,5 +12,7 @@ class PageAbstractForm extends BasePageAbstractForm
 {
   public function configure()
   {
+    $this->widgetSchema['keywords_tag']     = new sfWidgetFormTextarea();
+    $this->widgetSchema['description_tag']  = new sfWidgetFormTextarea();
   }
 }

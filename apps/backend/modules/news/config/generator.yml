@@ -1,0 +1,27 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           News
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          news
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        title:              { label: Tytuł }
+      list:    
+        display:            [=title]
+      filter:  
+        class:              false
+      form:    
+        display:
+          SEO:              [title_tag, keywords_tag, description_tag]
+          Treść:            [title, intro, text]
+      edit:    ~
+      new:     ~

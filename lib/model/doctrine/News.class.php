@@ -12,7 +12,7 @@
  */
 class News extends BaseNews
   implements myRouteObject
-{
+{  
   public function myGetRoute()
   {
     return 'news_show';

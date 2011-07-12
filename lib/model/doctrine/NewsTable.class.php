@@ -7,13 +7,13 @@
  */
 class NewsTable extends PageAbstractTable
 {
-    /**
-     * Returns an instance of this class.
-     *
-     * @return object NewsTable
-     */
-    public static function getInstance()
-    {
-        return Doctrine_Core::getTable('News');
-    }
+  /**
+   * Returns an instance of this class.
+   *
+   * @return NewsTable
+   */
+  public static function getInstance()
+  {
+    return Doctrine_Core::getTable('News');
+  }
 }
