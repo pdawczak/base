@@ -17,6 +17,10 @@ generator:
       list:    
         display:            [is_enabled, show_in_menu, =title]
       filter:  ~
-      form:    ~
+      form:    
+        display:
+          Zachowanie:       [is_enabled, show_in_menu, order]
+          SEO:              [title_tag, keywords_tag, description_tag]
+          Treść:            [title, text]
       edit:    ~
       new:     ~
