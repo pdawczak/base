@@ -11,7 +11,7 @@
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 class News extends BaseNews
-  implements myRouteObject
+  implements mySeoContent
 {  
   public function myGetRoute()
   {
@@ -26,5 +26,20 @@ class News extends BaseNews
   public function myGetLinkName()
   {
     return $this->getTitle();
+  }
+
+  public function getSeoTitleTag()
+  {
+    return $this->getTitleTag();
+  }
+
+  public function getSeoKeywordsTag()
+  {
+    return $this->getKeywordsTag();
+  }
+
+  public function getSeoDescriptionTag()
+  {
+    return $this->getDescriptionTag();
   }
 }
