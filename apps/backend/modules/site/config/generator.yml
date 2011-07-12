@@ -13,10 +13,14 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:  
+        is_enabled:         { label: Aktywna? }
+        show_in_menu:       { label: Widoczna w menu? }
+        title:              { label: Tytuł }
       list:    
         display:            [is_enabled, show_in_menu, =title]
-      filter:  ~
+      filter:  
+        class:               false
       form:    
         display:
           Zachowanie:       [is_enabled, show_in_menu, order]
