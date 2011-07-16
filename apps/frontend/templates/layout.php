@@ -10,6 +10,7 @@
   </head>
   <body>
     <?php include_component('site', 'mainMenu') ?>
+    <?php include_partial('site/breadcrumbs') ?>
     <?php echo $sf_content ?>
   </body>
 </html>

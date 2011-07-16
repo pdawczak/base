@@ -23,5 +23,6 @@ class siteActions extends myBaseActions
   public function executeShow(sfWebRequest $request)
   {
     $this->site = $this->getRoute()->getObject();
+    $this->getSeoManager()->add($this->site);
   }
 }

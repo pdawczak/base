@@ -51,7 +51,7 @@ class mySeoManager
         {
           continue;
         }
-        //isicsBreadcrumbs::getInstance()->addItem($content->getSeoTitle(), $content->getSeoRoute());
+        isicsBreadcrumbs::getInstance()->addItem($content->myGetSeoTitleTag(), $content->myGetRoute());
       }
     }
 
