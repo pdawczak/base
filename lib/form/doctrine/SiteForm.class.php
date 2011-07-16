@@ -21,8 +21,9 @@ class SiteForm extends BaseSiteForm
       'title', 'title_tag', 'keywords_tag', 'description_tag', 'is_enabled', 'show_in_menu', 'order', 'text'
     ));
 
-    //$this->widgetSchema['keywords_tag']     = new sfWidgetFormTextarea();
-    //$this->widgetSchema['description_tag']  = new sfWidgetFormTextarea();
+    $this->widgetSchema['text'] = new isicsWidgetFormTinyMCE(array(
+      'tiny_options' => sfConfig::get('app_tiny_mce_advanced', array())
+    ));
 
     $this->widgetSchema->setLabels(array(
       'title'           => 'Tytuł',
