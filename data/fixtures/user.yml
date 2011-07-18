@@ -1,0 +1,6 @@
+sfGuardUser:
+
+  admin:
+    username:       admin
+    password:       QscPTW!@#
+    is_super_admin: true
